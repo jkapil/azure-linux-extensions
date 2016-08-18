@@ -1,0 +1,16 @@
+[Unit]
+Description=Azure Linux Virtual Machine Identity Extension
+
+After=network-online.target walinuxagent.service
+Wants=network-online.target walinuxeagent.service
+
+ConditionalFileIsExecutable={WORKDIR}/vmidentityservice.py
+
+[Service]
+Type=simple
+WorkingDirectory={WORKDIR}
+ExecStart=/usr/bin/python2 {WORKDIR}/vmidentityservice.py -daemon
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

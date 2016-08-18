@@ -1,0 +1,14 @@
+[
+    {
+        "version": 1.0",
+        "handlerManifest": {
+            "disableCommand": "main.py -disable",
+            "enableCommand": "main.py -enable",
+            "installCommand": "main.py -install",
+            "uninstallCommand": "main.py -uninstall",
+            "updateCommand": "main.py -update",
+            "rebootAfterInstall": "false",
+            "reportHeartbeat": "false"
+        }
+    }
+]
